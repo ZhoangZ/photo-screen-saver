@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    
+    "outDir": "./build",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noEmit": false
+  },
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "include": [
+    "src/main.ts","src/preload.ts"
+  ]
+ 
+}
