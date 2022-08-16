@@ -46,29 +46,7 @@
     "unsplash-js": "^7.0.15"
   },
   "homepage": "./",
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ],
-    "rules": {
-      "linebreak-style": [
-        "warn",
-        "windows"
-      ],
-      "quotes": [
-        "warn",
-        "double"
-      ],
-      "semi": [
-        "warn",
-        "never",
-        {
-          "beforeStatementContinuationChars": "always"
-        }
-      ],
-      "no-unexpected-multiline": "warn"
-    }
-  },
+  
   "browserslist": {
     "production": [
       ">0.2%",

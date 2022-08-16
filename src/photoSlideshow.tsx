@@ -82,23 +82,21 @@ export function PhotoSlideshow()
             <TransitionGroup>
                <Transition key={state.photoIdx} timeout={(FADE_IN_DURATION + 1) * SECONDS} appear={true}>
                   <>
-                     <div
-                        className={classNames(styles.photo, { [styles.visible]: state.isImageLoaded })}
-                        style={{ zIndex: state.zIndex, transformOrigin: `${state.origin.x}% ${state.origin.y}%` }}
-                     >
-                        <img
+                  <div style={{margin: "auto", textAlign: "center"}}>
+                        <img style={{ height: "100vh" }}
                            src={state.photos[state.photoIdx].url}
                            alt=""
                            onLoad={onImageLoad}
                            onError={e => dispatch({ type: "next" })}
                         />
-                     </div>
-                     <label
-                        className={classNames(styles[`pos${state.photoIdx % 4}`], { [styles.visible]: state.isImageLoaded })}
-                        style={{ zIndex: state.zIndex }}
-                     >
-                        {getCaption(state.photos[state.photoIdx])}
-                     </label>
+                        <img style={{ height: "100vh" }}
+                           src={state.photos[state.photoIdx + 1].url}
+                           alt=""
+                           onLoad={onImageLoad}
+                           onError={e => dispatch({ type: "next" })}
+                        />
+                        </div>
+                    
                   </>
                </Transition>
             </TransitionGroup>

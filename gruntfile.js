@@ -56,10 +56,10 @@ module.exports = function (grunt) {
    grunt.loadNpmTasks("grunt-contrib-clean")
    grunt.loadNpmTasks("grunt-contrib-copy")
    grunt.loadNpmTasks("grunt-electron")
-   grunt.loadNpmTasks("grunt-eslint")
+   // grunt.loadNpmTasks("grunt-eslint")
    grunt.loadNpmTasks("grunt-exec")
 
-   grunt.registerTask("build", ["exec:compile_react", "exec:compile_electron", "eslint:lint_electron", "copy:toBuild"])
+   grunt.registerTask("build", ["exec:compile_react", "exec:compile_electron", "copy:toBuild"])
    grunt.registerTask("package", ["electron", "copy:toScr"])
    grunt.registerTask("default", ["build", "package"])
 }
